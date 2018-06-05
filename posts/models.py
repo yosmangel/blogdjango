@@ -1,4 +1,7 @@
+from __future__ import unicode_literals
+
 from django.db import models
+
 
 # Create your models here.
 
@@ -8,7 +11,5 @@ class Post(models.Model):
 	timestamp=models.DateTimeField(auto_now_add=True, auto_now=False)
 	actualizado=models.DateTimeField(auto_now_add=False, auto_now=True)
 
-
-	def __unicode__(self): #Python3 __str__
+	def __str__(self):
 		return self.titulo
-
